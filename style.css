@@ -1,0 +1,606 @@
+/* ==================================================
+   RESET
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#111;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:-10;
+    overflow:hidden;
+
+}
+
+.hero-background{
+
+    width:100%;
+    height:100%;
+
+}
+
+.hero-background img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .3s ease, filter .3s ease;
+
+}
+
+.hero::after{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.15);
+
+}
+
+/* ==================================================
+   MAIN
+================================================== */
+
+main{
+
+    position:relative;
+    margin-top:100vh;
+    padding-bottom:120px;
+
+}
+
+/* ==================================================
+   WINDOWS
+================================================== */
+
+.window{
+
+    width:94%;
+    max-width:1800px;
+
+    margin:50px auto;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.35);
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        box-shadow .35s ease;
+
+}
+
+.window:first-of-type{
+
+    margin-top:0;
+
+}
+
+.window.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.window:hover{
+
+    box-shadow:
+        0 40px 90px rgba(0,0,0,.45);
+
+}
+
+/* ==================================================
+   TITLE BAR
+================================================== */
+
+.window-bar{
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+    background:rgba(255,255,255,.05);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.traffic-lights{
+
+    position:absolute;
+
+    left:20px;
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.red,
+.yellow,
+.green{
+
+    width:13px;
+    height:13px;
+    border-radius:50%;
+
+}
+
+.red{
+
+    background:#ff5f57;
+
+}
+
+.yellow{
+
+    background:#febc2e;
+
+}
+
+.green{
+
+    background:#28c840;
+
+}
+
+.window-bar h3{
+
+    font-size:17px;
+
+    font-weight:500;
+
+    color:#f2f2f2;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==================================================
+   IMAGE WINDOWS
+================================================== */
+
+.image-window{
+
+    overflow:hidden;
+
+}
+
+.image-window img{
+
+    width:100%;
+    display:block;
+    transition:transform .5s ease;
+
+}
+
+.image-window img:hover{
+
+    transform:scale(1.01);
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery-slider{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:100%;
+
+}
+
+.slides{
+
+    display:flex;
+
+    transition:transform .65s cubic-bezier(.22,.61,.36,1);
+
+    width:100%;
+
+}
+
+.slide{
+
+    min-width:100%;
+
+    user-select:none;
+
+}
+
+.slide img,
+.slide{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+    transform:translateY(-50%);
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(30,30,30,.45);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+    font-weight:300;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    z-index:50;
+
+}
+
+.prev{
+
+    left:24px;
+
+}
+
+.next{
+
+    right:24px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:rgba(255,255,255,.15);
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+.prev{
+
+    left:20px;
+
+}
+
+.next{
+
+    right:20px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:rgba(0,0,0,.75);
+
+}
+
+/* ==================================================
+   CONTACT WINDOW
+================================================== */
+
+.contact-window{
+
+    width:520px;
+
+    max-width:90%;
+
+    margin:120px auto;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.35);
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        box-shadow .35s ease;
+
+}
+
+.contact-window.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.contact-window:hover{
+
+    box-shadow:
+        0 40px 90px rgba(0,0,0,.45);
+
+}
+
+/* ==================================================
+   CONTACT CONTENT
+================================================== */
+
+.contact-content{
+
+    padding:45px 35px;
+
+    text-align:center;
+
+}
+
+.contact-content h2{
+
+    font-size:30px;
+
+    font-weight:600;
+
+    margin-bottom:35px;
+
+}
+
+.contact-info{
+
+    margin-bottom:24px;
+
+}
+
+.contact-info:last-child{
+
+    margin-bottom:0;
+
+}
+
+.contact-info h4{
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:#b8b8b8;
+
+    margin-bottom:6px;
+
+}
+
+.contact-info p{
+
+    font-size:18px;
+
+    color:#ffffff;
+
+    word-break:break-word;
+
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    color:#9d9d9d;
+
+    font-size:14px;
+
+}
+
+/* ==================================================
+   SCROLLBAR
+================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#101010;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#5e5e5e;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#888;
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:1200px){
+
+    .window{
+
+        width:96%;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .window{
+
+        width:97%;
+
+        margin:35px auto;
+
+    }
+
+    .window-bar{
+
+        height:54px;
+
+    }
+
+    .window-bar h3{
+
+        font-size:15px;
+
+    }
+
+    .prev,
+    .next{
+
+        width:42px;
+        height:42px;
+
+        font-size:22px;
+
+    }
+
+    .contact-window{
+
+        width:95%;
+
+    }
+
+    .contact-content{
+
+        padding:35px 20px;
+
+    }
+
+    .contact-content h2{
+
+        font-size:24px;
+
+    }
+
+    .contact-info p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ==================================================
+   SMALL POLISH
+================================================== */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+button:focus{
+
+    outline:none;
+
+}
+
+.window,
+.contact-window{
+
+    will-change:transform, opacity;
+
+}
