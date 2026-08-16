@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.portfolio {
+    width: 100%;
+}
+
+.portfolio section {
+    width: 100%;
+    line-height: 0;
+}
+
+.portfolio img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
